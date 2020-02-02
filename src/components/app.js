@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
+
 class App extends Component {
   constructor() {
     super();
@@ -25,14 +26,18 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <ul>
+      <div class="container row">
+
+       
           {this.state.data.map(el => (
-            <li>
-              {el.name}: {el.price_usd}
-            </li>
+
+   <div class="card col-4">
+              
+   {el.name}: {el.price_usd}
+ </div>
+
           ))}
-        </ul>
+        
       </div>
     );
   }
